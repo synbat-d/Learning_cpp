@@ -1,10 +1,17 @@
 #include <iostream>
-
+namespace first{
+    int x = 1;
+}
+namespace second{
+    int x = 2;
+}
 int main(){
-    //const keyword makes only read only. Protects from changing
-    const double PI = 3.14159;
-    double radius = 10;
-    double circumference = 2 * PI * radius;
-    std::cout << circumference <<" cm"<< std::endl;
-    return 0;
+    using namespace first;
+    //namespace = provide a solution for preventing name conflicts in large projects
+    /*            int a large projects. Each entity needs a unique name.
+                  A namespace allows for identically named entities as long as
+                  the namespaces are different.
+    */
+    // int x = 0;
+    std::cout << x <<std::endl;
 }
